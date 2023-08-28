@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>KB AI</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+			crossorigin="anonymous"
+		/>
+	</head>
+	<body>
+		<div class="header">
+			<div class="d-flex row">
+				<h1
+					class="col-10 d-flex justify-content-center"
+					style="
+						padding-top: 15px;
+						background-color: cadetblue;
+						padding-left: 180px;
+					"
+				>
+					우리 어드바이저
+				</h1>
+				<div
+					id="header-btns"
+					class="col-2 d-flex justify-content-center"
+					style="background-color: orange; padding-top: 15px"
+				>
+					<button class="btn btn-info" style="height: 45px; margin-right: 10px">
+						로그인
+					</button>
+					<button class="btn btn-info" style="height: 45px">회원가입</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-2">
+				<div class="list-group">
+					<!-- <a href="#" class="list-group-item list-group-item-action"
+						>종목(토글)</a
+					> -->
+					<div class="btn-group dropend">
+						<button
+							class="btn btn-info dropdown-toggle"
+							type="button"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>
+							종목
+						</button>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+							<li><a class="dropdown-item" href="#">주식</a></li>
+							<li><a class="dropdown-item" href="#">채권</a></li>
+							<li><a class="dropdown-item" href="#">안전자산</a></li>
+						</ul>
+					</div>
+					<div class="btn-group dropend">
+						<button
+							class="btn btn-info dropdown-toggle"
+							type="button"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>
+							상품비교함
+						</button>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+							<li>
+								<div class="row">
+									<div class="col-7">
+										<a class="dropdown-item" href="#">첫번째 상품</a>
+									</div>
+									<div class="col-5">
+										<button class="btn btn-secondary">
+											<img
+												src="img/delete-icon.png"
+												alt="삭제"
+												onclick=""
+												style="width: 20px"
+											/>
+										</button>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="row">
+									<div class="col-7">
+										<a class="dropdown-item" href="#">두번째 상품</a>
+									</div>
+									<div class="col-5">
+										<button class="btn btn-secondary">
+											<img
+												src="img/delete-icon.png"
+												alt="삭제"
+												onclick=""
+												style="width: 20px"
+											/>
+										</button>
+									</div>
+								</div>
+							</li>
+							<li class="d-flex justify-content-center">
+								<button class="btn btn-secondary">상품 비교하기</button>
+							</li>
+						</ul>
+					</div>
+
+					<a
+						href="#"
+						class="list-group-item list-group-item-action d-flex justify-content-center"
+						>공지사항</a
+					>
+				</div>
+			</div>
+
+			<div class="col-10">
+				<div class="container">
+					<div class="row">
+						<div class="col-8"></div>
+						<div class="col-4">
+							<input
+								type="text"
+								class="form-control form-control-sm"
+								placeholder="종목을 검색하세요 🔍"
+							/>
+						</div>
+					</div>
+				</div>
+				<br />
+				<div id="body" class="container-sm" style="background-color: bisque">
+                    <div class="container mt-5">
+                        <div class="survey-page page1">
+                            <h2 class="mb-4">투자성향 설문조사 1/2</h2>
+                            <form action='/user/survey'>
+                                <p>1. 나이가 어떻게 되시나요? </br>
+                                </br>
+                                    <input type="radio" name="q1" value="0"> 10대 </br>
+                                    <input type="radio" name="q1" value="0"> 20대</br>
+                                    <input type="radio" name="q1" value="0"> 30대</br>
+                                    <input type="radio" name="q1" value="0"> 40대</br>
+                                    <input type="radio" name="q1" value="0"> 50대</br>
+                                    <input type="radio" name="q1" value="0"> 60대 이상</br>
+
+                                </br>   
+                                </p>
+                                <p>2. 금융 상품에 대한 이해 수준은 어느 정도라고 생각 하십니까? </br>
+                                </br>
+                                    <input type="radio" name="q2" value="1"> 매우 낮은 수준(투자의사 결정을 해 본 경험이 없음)</br>
+                                    <input type="radio" name="q2" value="2"> 낮은 수준(금융 상품에 대한 이해도는 없지만 투자 경험이 있음 ex. 주식 매매 경험)</br>
+                                    <input type="radio" name="q2" value="3"> 보통( 어느정도 금융에 대한 이해로 투자 경험이 있음)</br>
+                                    <input type="radio" name="q2" value="4"> 높은 수준(대부분의 금융상품(공매도, 선물, 채권, 주식, 안전자산, 펀더멘탈 같은 용어를 이해함)</br>
+                                    <input type="radio" name="q2" value="5"> 매우 높은 수준(기업의 재무재표를 볼 줄 알고, 금융 상품의 종류를 모두 이해한다. 그를 바탕으로 투자를 하는 중이다.)</br>
+                                </br>  
+                                </p>
+                                <p>3. 총 금융자산대비 투자상품은 어느 정도의 비중을 차지 합니까 </br>
+                                </br>
+                                    <input type="radio" name="q3" value="1"> 10% 미만 (예금, 적금 정도만 하고, 주식, 부동산, 채권 등은 보유하고 있지 않다.) </br>
+                                    <input type="radio" name="q3" value="2"> 50% 미만 (어느정도 주식투자는 하고 있는 상태이다) </br>
+                                    <input type="radio" name="q3" value="3"> 50% (절반 정도 된다) </br>
+                                    <input type="radio" name="q3" value="4"> 50% 이상( 절반 이상을 주식, 채권, 등 투자를 하고있다) </br>
+                                    <input type="radio" name="q3" value="5"> 80%~100% (자산 대부분을 투자로 굴리고 있다.)</br>
+                                </br>  
+                                </p>
+                                <p>4. 주식 시장에서의 투자를 어떻게 평가하시나요?</br>
+                                </br>
+
+                                <input type="radio" name="q4" value="1"> 주식은 도박이다.</br>
+                                <input type="radio" name="q4" value="2"> 투자는 너무 위험하니 예금, 적금 정도만 하고 있다. </br>
+                                <input type="radio" name="q4" value="3"> 어느정도 지식을 알고 한다면 조금의 리스크를 감수하는 선에서 투자는 하는 것이 좋다. </br>
+                                <input type="radio" name="q4" value="4"> 미래를 위해서는 투자는 해야 한다고 생각한다. </br>
+                                <input type="radio" name="q4" value="5"> 투자는 자산운용에 있어서 필수적으로 해야한다고 생각한다.</br>
+
+                            
+                                </br>  
+                                </p>
+                                <p>5. 투자 포트폴리오 구성시 어떤 측면을 가장 우선적으로 생각하시나요? (1문항)
+
+                                </br>
+                                </br>
+                                <input type="radio" name="q5" value="1"> 수익률이 은행이자 정도여도 괜찮으니 원금 만큼은 보장되어있으면 좋겠다. </br>
+                                <input type="radio" name="q5" value="2"> 원금 손실이 조금 일어나더라도 은행 이자(3~4%)보다는 수익률이 조금이라도 높게 나왔으면 좋겠다.</br>
+                                <input type="radio" name="q5" value="3"> 어느정도 리스크를 감수하더라도 수익률이 높게 나왔으면 좋겠다.</br>
+                                <input type="radio" name="q5" value="4"> 원금이 절반가까이 손실이 일어나더라도 20~30% 이상의 수익률이 나왔으면 좋겠다.</br>
+                                <input type="radio" name="q5" value="5"> 투자하는 돈은 없는 셈 치고 드라마틱한 수익률이 나왔으면 좋겠다.</br>
+                                </br>
+                                </p>
+                                <p>6. 투자 포트폴리오 구성시 어떤 측면을 가장 우선적으로 생각하시나요? (2문항)</br>
+                                </br>
+                                <input type="radio" name="q6" value="1"> 삼성전자, 네이버, 카카오 등 잘 알려진 우량 기업 위주로 투자한다. </br>
+                                <input type="radio" name="q6" value="2"> 누구나 아는 우량주보다 아직 알려지지 않은 ‘저평가된 주식을 발굴’하는 것이 좋다. </br>    
+                                <input type="radio" name="q6" value="3"> 기업 분석 결과보다는 차트의 ‘모양’을 보고 투자하는 것을 선호한다. </br>  
+                                <input type="radio" name="q6" value="4"> 하루에도 목표 수익률만 달성하면 곧바로 매도한다. </br>  
+                                <input type="radio" name="q6" value="5"> 가치주에 장기투자하는 것을 선호한다. </br>  
+                                </p>
+                                <button type="button" class="btn btn-primary" onclick="showPage(2)">Next</button>
+                            </form>
+                        </div>
+                
+                        <div class="survey-page page2 d-none">
+                            <h2 class="mb-4">Page 2/2</h2>
+                            <form>
+                                
+                                <p>Question 7: <input type="radio" name="q7" value="1"> Option 1 <input type="radio" name="q7" value="2"> Option 2</p>
+                                <p>Question 8: <input type="radio" name="q8" value="1"> Option 1 <input type="radio" name="q8" value="2"> Option 2</p>
+                                <p>Question 9: <input type="radio" name="q9" value="1"> Option 1 <input type="radio" name="q9" value="2"> Option 2</p>
+                                <p>Question 10: <input type="radio" name="q10" value="1"> Option 1 <input type="radio" name="q10" value="2"> Option 2</p>
+                                <p>Question 11: <input type="radio" name="q11" value="1"> Option 1 <input type="radio" name="q11" value="2"> Option 2</p>
+                                <p>Question 12: <input type="radio" name="q12" value="1"> Option 1 <input type="radio" name="q12" value="2"> Option 2</p>
+                                <p>Question 13: <input type="radio" name="q13" value="1"> Option 1 <input type="radio" name="q13" value="2"> Option 2</p>
+                                <p>Question 14: <input type="radio" name="q14" value="1"> Option 1 <input type="radio" name="q14" value="2"> Option 2</p>
+                                <button type="button" class="btn btn-primary" onclick="showPage(1)">Previous</button>
+                                <button type="button" class="btn btn-success" onclick="redirectToResult()">Result</button>
+
+                            </form>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			id="footer"
+			class="container-sm"
+			style="background-color: lightgray; padding-top: 50px"
+		>
+			<div class="d-flex justify-content-center">footer 자리입니다</div>
+		</div>
+
+
+        <script>
+            let totalScore = 0;
+    
+            function showPage(pageNumber) {
+                const pages = document.querySelectorAll('.survey-page');
+                pages.forEach(page => page.classList.add('d-none'));
+                pages[pageNumber - 1].classList.remove('d-none');
+            }
+    
+        //     function calculateScore() {
+        //     totalScore = 0;
+
+        //     const radioInputs = document.querySelectorAll('input[type="radio"]:checked');
+        //     radioInputs.forEach(input => {
+        //         const value = parseInt(input.value);
+        //         if (!isNaN(value)) {
+        //             totalScore += value;
+        //         }
+        //     });
+
+        //     alert(`Your total score is: ${totalScore}`);
+        // }
+        function redirectToResult() {
+            // Calculate the score if needed
+            // ...
+
+            // Redirect to result.html
+            window.location.href = 'result.html';
+        }
+        </script>
+	</body>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+		crossorigin="anonymous"
+	></script>
+</html>
