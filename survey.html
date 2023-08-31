@@ -133,66 +133,78 @@
                     <div class="container mt-5">
                         <div class="survey-page page1">
                             <h2 class="mb-4">투자성향 설문조사 1/2</h2>
+							<p>응답시 버튼을 더블클릭하면 취소할 수 있습니다.</p>
                             <form action='/user/survey'>
-                                <p>1. 나이가 어떻게 되시나요? </br>
+                                <p>1. 향후 수입을 어떻게 예상하시나요? </br>
                                 </br>
-                                    <input type="radio" name="q1" value="0"> 10대 </br>
-                                    <input type="radio" name="q1" value="0"> 20대</br>
-                                    <input type="radio" name="q1" value="0"> 30대</br>
-                                    <input type="radio" name="q1" value="0"> 40대</br>
-                                    <input type="radio" name="q1" value="0"> 50대</br>
-                                    <input type="radio" name="q1" value="0"> 60대 이상</br>
-
+                                    <input type="radio" name="q1" value="5" ondblclick="this.checked=false"> 현재 일정한 수입이 발생하고 있으며, 향후 전체 수준을 
+									유지하거나 증가할 것 같아요 </br>
+                                    <input type="radio" name="q1" value="3"ondblclick="this.checked=false"> 현재 일정한 수입이 발생하고 있으나, 향후 감소하거나 
+									불안정할 것 같아요</br>
+                                    <input type="radio" name="q1" value="1"ondblclick="this.checked=false"> 현재 일정한 수입이 없으며, 현금이 주 수입원이에요</br>
                                 </br>   
                                 </p>
-                                <p>2. 금융 상품에 대한 이해 수준은 어느 정도라고 생각 하십니까? </br>
+								
+                                <p>2. 기존 보유하고 계신 총자산 대비 금융자산의 비중은 어
+									느 정도인가요?</br>
                                 </br>
-                                    <input type="radio" name="q2" value="1"> 매우 낮은 수준(투자의사 결정을 해 본 경험이 없음)</br>
-                                    <input type="radio" name="q2" value="2"> 낮은 수준(금융 상품에 대한 이해도는 없지만 투자 경험이 있음 ex. 주식 매매 경험)</br>
-                                    <input type="radio" name="q2" value="3"> 보통( 어느정도 금융에 대한 이해로 투자 경험이 있음)</br>
-                                    <input type="radio" name="q2" value="4"> 높은 수준(대부분의 금융상품(공매도, 선물, 채권, 주식, 안전자산, 펀더멘탈 같은 용어를 이해함)</br>
-                                    <input type="radio" name="q2" value="5"> 매우 높은 수준(기업의 재무재표를 볼 줄 알고, 금융 상품의 종류를 모두 이해한다. 그를 바탕으로 투자를 하는 중이다.)</br>
+                                    <input type="radio" name="q2" value="1" ondblclick="this.checked=false"> 5% 이하</br>
+                                    <input type="radio" name="q2" value="2" ondblclick="this.checked=false"> 10% 이하</br>
+                                    <input type="radio" name="q2" value="3" ondblclick="this.checked=false"> 20% 이하</br>
+                                    <input type="radio" name="q2" value="4" ondblclick="this.checked=false"> 30% 이하</br>
+                                    <input type="radio" name="q2" value="5" ondblclick="this.checked=false"> 30% 초과</br>
                                 </br>  
                                 </p>
-                                <p>3. 총 금융자산대비 투자상품은 어느 정도의 비중을 차지 합니까 </br>
+                                <p>3. 투자한 경험이 있는 항목을 모두 선택해주세요.(중복 가능, 더블클릭=취소)</br>
                                 </br>
-                                    <input type="radio" name="q3" value="1"> 10% 미만 (예금, 적금 정도만 하고, 주식, 부동산, 채권 등은 보유하고 있지 않다.) </br>
-                                    <input type="radio" name="q3" value="2"> 50% 미만 (어느정도 주식투자는 하고 있는 상태이다) </br>
-                                    <input type="radio" name="q3" value="3"> 50% (절반 정도 된다) </br>
-                                    <input type="radio" name="q3" value="4"> 50% 이상( 절반 이상을 주식, 채권, 등 투자를 하고있다) </br>
-                                    <input type="radio" name="q3" value="5"> 80%~100% (자산 대부분을 투자로 굴리고 있다.)</br>
+									3-1</br>
+                                    <input type="radio" name="q3" value="0" ondblclick="this.checked=false"> 금융투자상품에 투자해 본 경험이 없음 </br>
+                                    3-2</br>
+									<a>
+										<input type="radio" name="q3" value="6" ondblclick="this.checked=false">
+										주식신용거래, 선물/옵션, ELW, 원금비보장형 ELS/DLS/ELF</br>
+										<input type="radio" name="q3-2-1" value="1" ondblclick="this.checked=false"> 1년미만 </br>
+										<input type="radio" name="q3-2-1" value="3" ondblclick="this.checked=false"> 1년이상 3년미만 </br>
+										<input type="radio" name="q3-2-1" value="5" ondblclick="this.checked=false"> 3년이상 </br>
+									</a>	
+									3-3</br>
+									<a>
+										<input type="radio" name="q3-3" value="3" ondblclick="this.checked=false">
+										주식, 주식형펀드, 해외펀드, 원금보장형 ELS/DLS/ELF,투자자문/일임(Wrap), 외화증권</br>
+										<input type="radio" name="q3-3-1" value="1" ondblclick="this.checked=false"> 1년미만 </br>
+										<input type="radio" name="q3-3-1" value="3" ondblclick="this.checked=false"> 1년이상 3년미만 </br>
+										<input type="radio" name="q3-3-1" value="5" ondblclick="this.checked=false"> 3년이상 </br>
+									</a>	
+									3-4</br>
+									<a>
+										<input type="radio" name="q3-4" value="1" ondblclick="this.checked=false">
+										채권/혼합형 펀드, 신탁, 채권</br>
+										<input type="radio" name="q3-4-1" value="1" ondblclick="this.checked=false"> 1년미만 </br>
+										<input type="radio" name="q3-4-1" value="3" ondblclick="this.checked=false"> 1년이상 3년미만 </br>
+										<input type="radio" name="q3-4-1" value="5" ondblclick="this.checked=false"> 3년이상 </br>
+									</a>
                                 </br>  
                                 </p>
-                                <p>4. 주식 시장에서의 투자를 어떻게 평가하시나요?</br>
+                                <p>4. 어떤 목적으로 투자하시나요?</br>
                                 </br>
 
-                                <input type="radio" name="q4" value="1"> 주식은 도박이다.</br>
-                                <input type="radio" name="q4" value="2"> 투자는 너무 위험하니 예금, 적금 정도만 하고 있다. </br>
-                                <input type="radio" name="q4" value="3"> 어느정도 지식을 알고 한다면 조금의 리스크를 감수하는 선에서 투자는 하는 것이 좋다. </br>
-                                <input type="radio" name="q4" value="4"> 미래를 위해서는 투자는 해야 한다고 생각한다. </br>
-                                <input type="radio" name="q4" value="5"> 투자는 자산운용에 있어서 필수적으로 해야한다고 생각한다.</br>
-
+                                <input type="radio" name="q4" value="1" ondblclick="this.checked=false"> 투자 수익보다 원금 보존이 더 중요해요</br>
+                                <input type="radio" name="q4" value="3" ondblclick="this.checked=false"> 현금 보존 가능성을 조금 포기하더라도 투자 수익을 낼 수 있으면 좋겠어요 </br>
+                                <input type="radio" name="q4" value="4" ondblclick="this.checked=false">  원금 손실 위험이 있어도 높은 투자 수익을 원해요 </br>
+                                
                             
                                 </br>  
                                 </p>
-                                <p>5. 투자 포트폴리오 구성시 어떤 측면을 가장 우선적으로 생각하시나요? (1문항)
+                                <p>5. . 고객님께서 감내하실 수 있는 투자수익 및 위험수준은 
+									어느 정도인가요?
 
                                 </br>
                                 </br>
-                                <input type="radio" name="q5" value="1"> 수익률이 은행이자 정도여도 괜찮으니 원금 만큼은 보장되어있으면 좋겠다. </br>
-                                <input type="radio" name="q5" value="2"> 원금 손실이 조금 일어나더라도 은행 이자(3~4%)보다는 수익률이 조금이라도 높게 나왔으면 좋겠다.</br>
-                                <input type="radio" name="q5" value="3"> 어느정도 리스크를 감수하더라도 수익률이 높게 나왔으면 좋겠다.</br>
-                                <input type="radio" name="q5" value="4"> 원금이 절반가까이 손실이 일어나더라도 20~30% 이상의 수익률이 나왔으면 좋겠다.</br>
-                                <input type="radio" name="q5" value="5"> 투자하는 돈은 없는 셈 치고 드라마틱한 수익률이 나왔으면 좋겠다.</br>
+                                <input type="radio" name="q5" value="1" ondblclick="this.checked=false"> 무슨 일이 있어도 투자원금은 보전돼야해요 </br>
+                                <input type="radio" name="q5" value="3" ondblclick="this.checked=false"> 10% 정도만 변동이 있어도 매도하고 나와야 해요</br>
+                                <input type="radio" name="q5" value="4" ondblclick="this.checked=false"> 20% 정도는 당황하지 않고 추가 매수도 가능해요</br>
+                                <input type="radio" name="q5" value="5" ondblclick="this.checked=false"> 30%정도 변동은 버틸 수 있고 그이상의 변동도 가능해요</br>
                                 </br>
-                                </p>
-                                <p>6. 투자 포트폴리오 구성시 어떤 측면을 가장 우선적으로 생각하시나요? (2문항)</br>
-                                </br>
-                                <input type="radio" name="q6" value="1"> 삼성전자, 네이버, 카카오 등 잘 알려진 우량 기업 위주로 투자한다. </br>
-                                <input type="radio" name="q6" value="2"> 누구나 아는 우량주보다 아직 알려지지 않은 ‘저평가된 주식을 발굴’하는 것이 좋다. </br>    
-                                <input type="radio" name="q6" value="3"> 기업 분석 결과보다는 차트의 ‘모양’을 보고 투자하는 것을 선호한다. </br>  
-                                <input type="radio" name="q6" value="4"> 하루에도 목표 수익률만 달성하면 곧바로 매도한다. </br>  
-                                <input type="radio" name="q6" value="5"> 가치주에 장기투자하는 것을 선호한다. </br>  
                                 </p>
                                 <button type="button" class="btn btn-primary" onclick="showPage(2)">Next</button>
                             </form>
@@ -202,16 +214,54 @@
                             <h2 class="mb-4">Page 2/2</h2>
                             <form>
                                 
-                                <p>Question 7: <input type="radio" name="q7" value="1"> Option 1 <input type="radio" name="q7" value="2"> Option 2</p>
-                                <p>Question 8: <input type="radio" name="q8" value="1"> Option 1 <input type="radio" name="q8" value="2"> Option 2</p>
-                                <p>Question 9: <input type="radio" name="q9" value="1"> Option 1 <input type="radio" name="q9" value="2"> Option 2</p>
-                                <p>Question 10: <input type="radio" name="q10" value="1"> Option 1 <input type="radio" name="q10" value="2"> Option 2</p>
-                                <p>Question 11: <input type="radio" name="q11" value="1"> Option 1 <input type="radio" name="q11" value="2"> Option 2</p>
-                                <p>Question 12: <input type="radio" name="q12" value="1"> Option 1 <input type="radio" name="q12" value="2"> Option 2</p>
-                                <p>Question 13: <input type="radio" name="q13" value="1"> Option 1 <input type="radio" name="q13" value="2"> Option 2</p>
-                                <p>Question 14: <input type="radio" name="q14" value="1"> Option 1 <input type="radio" name="q14" value="2"> Option 2</p>
+                                <p>6. 고객님의 금융지식 수준(이해도)는 어느 정도라고 생각하시나요?
+								</br>
+								<input type="radio" name="q6" value="1" ondblclick="this.checked=false"> 예적금 외에 다른 금융투자상품에 투자해본 적이 없어요</br>
+								<input type="radio" name="q6" value="2" ondblclick="this.checked=false"> 주식, 채권, 펀드 같은 일반적인 상품 정도는 설명만 좀 들으면, 투자 여부를 결정할 수 있어요</br>
+								<input type="radio" name="q6" value="3" ondblclick="this.checked=false"> 주식, 채권, 펀드 같은 일반적인 상품은 잘 알고 있으며,투자 여부를 결정할 수 있어요</br>
+								<input type="radio" name="q6" value="4" ondblclick="this.checked=false"> 파생상품을 포함한 대부분의 금융투자상품에 대해 충분히 잘 알고 있어요</br>
+								</p>
+
+								<p>7.  고령 투자자, 주부, 은퇴자 등 금융투자상품에 대한 이해
+									가 부족하거나 투자경험이 없는 투자자의 경우 <금융소
+									비자 보호 모범규준>에 따른 금융취약 계층으로 금융소
+									비자의 불이익 사항을 다른 정보보다 우선하여 설명 받
+									으실 수 있습니다. 해당 항목에 체크하여 주시기 바랍니
+									다.
+								</br>
+								<input type="radio" name="q7" value="0" ondblclick="this.checked=false"> 금융투자상품에 대한 이해가 부족하거나 투자 경험이 없음</br>
+								<input type="radio" name="q7" value="0" ondblclick="this.checked=false"> 해당사항 없음</br>
+								</p>
+
+								<p>8. 고객님의 나이는 어떻게 되시나요?
+								</br>
+								<input type="radio" name="q8" value="1" ondblclick="this.checked=false"> 20세 미만</br>
+								<input type="radio" name="q8" value="3" ondblclick="this.checked=false"> 20~35세 미만</br>
+								<input type="radio" name="q8" value="5" ondblclick="this.checked=false"> 35~50세 미만</br>
+								<input type="radio" name="q8" value="2" ondblclick="this.checked=false"> 50~60세 미만</br>
+								<input type="radio" name="q8" value="1" ondblclick="this.checked=false"> 65세 이상</br>
+								</p>
+
+								<p>9. 현재 투자자산에 대한 투자예정기간은 어떻게 되시나요?
+								</br>
+								<input type="radio" name="q9" value="4" ondblclick="this.checked=false"> 1년미만</br>
+								<input type="radio" name="q9" value="4" ondblclick="this.checked=false"> 1~2년미만</br>
+								<input type="radio" name="q9" value="4" ondblclick="this.checked=false"> 2~3년미만</br>
+								<input type="radio" name="q9" value="4" ondblclick="this.checked=false"> 3~5년미만</br>
+								<input type="radio" name="q9" value="4" ondblclick="this.checked=false"> 5년이상</br>
+								</p>
+
+								<p>10. 고객님의 연 소득은 어떻게 되시나요?
+								</br>
+								<input type="radio" name="q10" value="1" ondblclick="this.checked=false"> 2천만원 미만</br>
+								<input type="radio" name="q10" value="2" ondblclick="this.checked=false"> 2천만원~5천만원 미만</br>
+								<input type="radio" name="q10" value="3" ondblclick="this.checked=false"> 5천만원~7천만원 미만</br>
+								<input type="radio" name="q10" value="4" ondblclick="this.checked=false"> 7천만원~1억원 미만</br>
+								<input type="radio" name="q10" value="5" ondblclick="this.checked=false"> 1억원 이상</br>
+								</p>
+						
                                 <button type="button" class="btn btn-primary" onclick="showPage(1)">Previous</button>
-                                <button type="button" class="btn btn-success" onclick="redirectToResult()">Result</button>
+                                <button type="button" class="btn btn-success" onclick="calculateScore()">Result</button>
 
                             </form>
                         </div>
@@ -229,28 +279,34 @@
 		</div>
 
 
-        <script>
-            let totalScore = 0;
-    
+        <script>    
             function showPage(pageNumber) {
                 const pages = document.querySelectorAll('.survey-page');
                 pages.forEach(page => page.classList.add('d-none'));
                 pages[pageNumber - 1].classList.remove('d-none');
             }
     
-        //     function calculateScore() {
-        //     totalScore = 0;
+            function calculateScore() {
+				let totalScore = 0;
 
-        //     const radioInputs = document.querySelectorAll('input[type="radio"]:checked');
-        //     radioInputs.forEach(input => {
-        //         const value = parseInt(input.value);
-        //         if (!isNaN(value)) {
-        //             totalScore += value;
-        //         }
-        //     });
+				const radioInputs = document.querySelectorAll('input[type="radio"]:checked');
+				radioInputs.forEach(input => {
+					const value = parseInt(input.value);
+					if (!isNaN(value)) {
+						totalScore += value;
+					}
+				});
 
-        //     alert(`Your total score is: ${totalScore}`);
-        // }
+				if (totalScore >= 0 && totalScore <= 20) {
+					window.location.href = `result.html?type=stable&score=${totalScore}`;
+				} else if (totalScore >= 21 && totalScore <= 50) {
+					window.location.href = `result.html?type=adventurous&score=${totalScore}`;
+				} else {
+					alert('Invalid score range');
+				}
+			}
+
+
         function redirectToResult() {
             // Calculate the score if needed
             // ...
