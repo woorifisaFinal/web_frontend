@@ -31,6 +31,9 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <!-- =======================================================
   * Template Name: NiceAdmin
   * Updated: May 30 2023 with Bootstrap v5.3.0
@@ -90,6 +93,11 @@
           <i class="bi bi-menu-button-wide"></i><span>종목</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+            <a href="item.html">
+              <i class="bi bi-circle"></i><span>종목 상세페이지</span>
+            </a>
+          </li>
           <li>
             <a href="components-cards.html">
               <i class="bi bi-circle"></i><span>주식</span>
@@ -131,9 +139,11 @@
       </li><!-- End Tables Nav -->
 
 
-       
-			<a class="nav-link " href="notice.html"><span>공지사항</span><i class="bi bi-grid"></i>
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="notice.html">
+            <i class="bi bi-bar-chart"></i><span>공지사항</span>
         </a>
+    </li>
     </ul>
 
   </aside><!-- End Sidebar-->
@@ -149,12 +159,16 @@
         <div class="col-8"></div>
         <div class="col-4">
             <div class="row">
-				<div class="search-bar">
-					<form class="search-form d-flex align-items-center" method="POST" action="#">
-						<input type="text" name="query" placeholder="공지사항을 검색하세요" title="Enter search keyword" class="form-control form-control-sm">
-						<button type="submit" title="Search" class="btn btn-outline-secondary btn-sm">🔍</button>
-					</form>
-				</div><!-- End Search Bar -->
+              <div class="search-bar">
+                <form class="search-form d-flex align-items-center" method="POST" action="#">
+                    <div class="input-group">
+                        <input type="text" name="query" placeholder="공지사항을 검색하세요" title="Enter search keyword" class="form-control form-control-sm">
+                        <button type="submit" title="Search" class="btn btn-outline-secondary btn-sm" style="border-radius: 0;">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+            </div><!-- End Search Bar -->
                 </div>
             </div>
         </div>
@@ -185,13 +199,18 @@
 </div>
 </div>
 
-<div
-id="footer"
-class="container-sm"
-style="background-color: lightgray; padding-top: 50px"
->
-<div class="d-flex justify-content-center">footer 자리입니다</div>
-</div>
+<footer id="footer" class="footer">
+  <div class="copyright">
+    &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+  </div>
+  <div class="credits">
+    <!-- All the links in the footer should remain intact. -->
+    <!-- You can delete the links only if you purchased the pro version. -->
+    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+  </div>
+</footer><!-- End Footer -->
 
   <!-- ======= Footer ======= -->
   
