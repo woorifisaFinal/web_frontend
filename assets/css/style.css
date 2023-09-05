@@ -641,7 +641,7 @@ h6 {
 
   #main,
   #footer {
-    margin-left: 300px;
+    margin-left: 150px;
   }
 }
 
@@ -1185,10 +1185,16 @@ h6 {
 # Footer
 --------------------------------------------------------------*/
 .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   padding: 20px 0;
   font-size: 14px;
   transition: all 0.3s;
   border-top: 1px solid #cddfff;
+  background-color: #fff; /* You can adjust the background color as needed */
+  z-index: 999; /* Ensure the footer is above other content */
 }
 
 .footer .copyright {
@@ -1202,6 +1208,7 @@ h6 {
   font-size: 13px;
   color: #012970;
 }
+
 
 /*
 * demo.css

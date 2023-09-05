@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>우리FISA - 기술세미나</title>
+  <title>Final Project</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -178,31 +178,26 @@
 <br />
 <br />
 <br />
-<div id="body" class="container-sm" style="background-color: bisque">
-    <h3>공지사항</h3>
-    <div class="row">
-        <div class="col-8"></div>
-        <div class="col-4">
-            <div class="row">
-              <div class="search-bar">
-                <form class="search-form d-flex align-items-center" method="POST" action="#">
-                    <div class="input-group">
-                        <input type="text" name="query" placeholder="공지사항을 검색하세요" title="Enter search keyword" class="form-control form-control-sm">
-                        <button type="submit" title="Search" class="btn btn-outline-secondary btn-sm" style="border-radius: 0;">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-                </form>
-            </div><!-- End Search Bar -->
-                </div>
-            </div>
-        </div>
+<main id="main" class="main">
+  <div class="container">
+    <div class="d-flex justify-content-between" style="border-bottom: 2px solid blue;">
+      <div><img class="mb-3" id="square" src="img\bluebox.jpg" alt="이미지 교체중입니다.">&nbsp;<h2 style="display: inline-block" class="fs-2 fw-bold" >공지사항</h2> </div>
+      <div id="board-search" class="search-bar">
+        <form class="search-form d-flex align-items-center" method="POST" action="#">
+            <input type="text" name="query" placeholder="제목을 검색하세요" title="Enter search keyword" class="form-control form-control-sm">
+            <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+        </form>
+      </div><!-- End Search Bar -->
     </div>
+    
+  </div>  
+  <div id="body" class="container-sm" style="background-color: bisque">
+
     <table class="table">
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">공지사항</th>
+                <th scope="col">Title</th>
             </tr>
         </thead>
         <tbody>
@@ -221,21 +216,27 @@
         </tbody>
     </table>
 </div>
+</main>
+
+    
+</main>
 </div>
 </div>
 
-<footer id="footer" class="footer">
-  <div class="copyright">
-    &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
-  </div>
-  <div class="credits">
-    <!-- All the links in the footer should remain intact. -->
-    <!-- You can delete the links only if you purchased the pro version. -->
-    <!-- Licensing information: https://bootstrapmade.com/license/ -->
-    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-  </div>
-</footer><!-- End Footer -->
+  	<!-- ======= Footer ======= -->
+    <footer class="footer">
+      <div class="copyright">
+        &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+      </footer>
+    <!-- End Footer -->
 
   <!-- ======= Footer ======= -->
   
