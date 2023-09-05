@@ -80,6 +80,15 @@
             회원가입        
         </a>
       </div>
+      <div class="d-flex custom-button-group">
+        <a href="login.html" class="btn btn-primary" style="height: 45px; margin-right: 10px">
+            로그인
+        </a>
+        <a href="signup.html" class="btn btn-success" style="height: 45px">
+            회원가입
+        </a>
+    </div>
+      
     </div>
         
     </div>
@@ -91,7 +100,14 @@
       }
     </style>
 
-    
+  </div>
+  <style>
+    .custom-button-group {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: -40px; /* 버튼을 위로 올리는 여백 조정 */
+    }
+</style>
   </header><!-- End Header -->
   
 
@@ -140,7 +156,6 @@
         </ul>
       </li><!-- End Components Nav -->
 
-
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-layout-text-window-reverse"></i><span>상품비교함</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -175,8 +190,8 @@
 <br />
 <br />
 <br />
-
-<div id="body" class="container-sm" style="background-color: bisque">
+<main id="main" class="main">
+<div id="body" class="col-10" style="background-color: white">
     <h3>종목 목록</h3>
     <br />
     <table class="table">
