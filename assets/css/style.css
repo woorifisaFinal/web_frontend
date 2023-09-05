@@ -20,6 +20,13 @@
   color: #444444;
 }
 
+/* 
+.square {
+  margin-bottom: 15px;
+  margin-left: 10px;
+  margin-right: ;
+} */
+
 a {
   color: #4154f1;
   text-decoration: none;
@@ -1302,4 +1309,22 @@ h6 {
 .layout-demo-info {
   text-align: center;
   margin-top: 1rem;
+}
+
+#survey-inside {
+  font-size: 19px;
+  margin-left: 60px;
+}
+
+#survey-title-inside {
+    color: blue;
+    display: inline;
+    margin-bottom: 10px;
+}
+
+#survey-num{
+  font-size: 20px;
+  display: inline;
+  color: blue;
+
 }
