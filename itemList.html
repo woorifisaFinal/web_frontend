@@ -57,20 +57,37 @@
 
     <div class="col-10">
       <div class="container">
-        <div class="row">
-          <div class="col-8"></div>
-          <div class="col-4 text-end">
-            <div class="search-bar">
-              <form class="search-form d-flex align-items-center" method="POST" action="#">
-                <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+      <div class="row">
+        <div class="col-8">
+          <div class="search-bar d-flex justify-content-start">
+            <form class="search-form d-flex align-items-center" method="POST" action="#">
+                <input type="text" name="query" placeholder="종목을 검색하세요" title="Enter search keyword" class="form-control form-control-sm">
                 <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-              </form>
-            </div><!-- End Search Bar -->
-          </div>
+            </form>
+        </div><!-- End Search Bar -->
+        </div>
+        <div class="col-4 text-end">
         </div>
       </div>
+      <div class="d-flex custom-button-group">
+        <a href="login.html" class="btn btn-primary" style="height: 45px; margin-right: 10px">
+            로그인
+        </a>
+        <a href="signup.html" class="btn btn-success" style="height: 45px">
+            회원가입
+        </a>
+    </div>
+      
     </div>
 
+  </div>
+  <style>
+    .custom-button-group {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: -40px; /* 버튼을 위로 올리는 여백 조정 */
+    }
+</style>
   </header><!-- End Header -->
 
   <!-- ======= Sidebar ======= -->
@@ -115,7 +132,6 @@
           </li>
         </ul>
       </li><!-- End Components Nav -->
-
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
@@ -168,8 +184,8 @@
 <br />
 <br />
 <br />
-
-<div id="body" class="container-sm" style="background-color: bisque">
+<main id="main" class="main">
+<div id="body" class="container-sm" style="background-color: white">
     <h3>종목 목록</h3>
     <br />
     <table class="table">
@@ -202,7 +218,7 @@
 </div>
 </div>
 </div>
-
+</main>
 <footer id="footer" class="footer">
   <div class="copyright">
     &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
