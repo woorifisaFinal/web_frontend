@@ -43,7 +43,7 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top d-flex align-items-center">
+    <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
       <i class="bi bi-list toggle-sidebar-btn" style="float: left; margin-right: 30px;"></i>
@@ -51,10 +51,6 @@
       <img src="assets/img/logo.png" alt="">
       <span class="d-none d-lg-block">우리FISA</span>
       </a>
-      
-    
-     
-
 
     </div><!-- End Logo -->
   
@@ -97,116 +93,167 @@
 
 
 
-<!-- ======= Sidebar ======= -->
-  <aside id="sidebar" class="sidebar">
+  <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
 
-    <ul class="sidebar-nav" id="sidebar-nav">
+      <ul class="sidebar-nav" id="sidebar-nav">
 
-      <li class="nav-item">
-        <a class="nav-link " href="dashboard.html">
-          <i class="bi bi-grid"></i>
-          <span>대시보드</span>
-        </a>
-      </li><!-- End Dashboard Nav -->
+        <li class="nav-item">
+          <a class="nav-link " href="dashboard.html">
+            <i class="bi bi-grid"></i>
+            <span>대시보드</span>
+          </a>
+        </li><!-- End Dashboard Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-menu-button-wide"></i><span>종목</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="item.html">
-              <i class="bi bi-circle"></i><span>종목 상세페이지</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-cards.html">
-              <i class="bi bi-circle"></i><span>주식</span>
-            </a>
-          </li>
-
-
-          <li>
-            <a href="components-progress.html">
-              <i class="bi bi-circle"></i><span>채권</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="components-progress.html">
-              <i class="bi bi-circle"></i><span>안전자산</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Components Nav -->
+        <li class="nav-item">
+          <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-menu-button-wide"></i><span>종목</span><i class="bi bi-chevron-down ms-auto"></i>
+          </a>
+          <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <li>
+              <a href="item.html">
+                <i class="bi bi-circle"></i><span>종목 상세페이지</span>
+              </a>
+            </li>
+            <li>
+              <a href="components-cards.html">
+                <i class="bi bi-circle"></i><span>주식</span>
+              </a>
+            </li>
 
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-layout-text-window-reverse"></i><span>상품비교함</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="tables-general.html">
-              <i class="bi bi-circle"></i><span>첫번째 자산</span>
-            </a>
-          </li>
-          <li>
-            <a href="tables-data.html">
-              <i class="bi bi-circle"></i><span>두번째 자산</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Tables Nav -->
+            <li>
+              <a href="components-progress.html">
+                <i class="bi bi-circle"></i><span>채권</span>
+              </a>
+            </li>
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="notice.html">
-            <i class="bi bi-bar-chart"></i><span>공지사항</span>
-        </a>
-    </li>
+            <li>
+              <a href="components-progress.html">
+                <i class="bi bi-circle"></i><span>안전자산</span>
+              </a>
+            </li>
+          </ul>
+        </li><!-- End Components Nav -->
 
 
-    </ul>
+        <li class="nav-item">
+          <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-layout-text-window-reverse"></i><span>상품비교함</span><i class="bi bi-chevron-down ms-auto"></i>
+          </a>
+          <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <li>
+              <a href="tables-general.html">
+                <i class="bi bi-circle"></i><span>첫번째 자산</span>
+              </a>
+            </li>
+            <li>
+              <a href="tables-data.html">
+                <i class="bi bi-circle"></i><span>두번째 자산</span>
+              </a>
+            </li>
+          </ul>
+        </li><!-- End Tables Nav -->
 
-</aside><!-- End Sidebar-->
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="notice.html">
+              <i class="bi bi-bar-chart"></i><span>공지사항</span>
+          </a>
+      </li>
+
+
+      </ul>
+
+    </aside>
+  <!-- End Sidebar-->
   
-<!-- 메인자리임 -->
-<br />
-<br />
-<br />
-<br />
-<main id="main" class="main">
-<div id="body" class="col-10" style="background-color: white">
-    <h3>종목 목록</h3>
-    <br />
-    <table class="table">
-        <thead class="table-info">
-            <tr>
-                <th scope="col">종목 이름</th>
-                <th scope="col">종목 설명</th>
-                <th scope="col"></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">국내주식-KOSPI</th>
-                <td>KOSPI는 국내 주식 지표입니다</td>
-                <td><button class="btn btn-info">자세히보기</button></td>
-            </tr>
-            <tr>
-                <th scope="row">해외주식-NASDAQ</th>
-                <td>나스닥은 미국의 장외 주식거래시장이다.</td>
-
-                <td><button class="btn btn-info">자세히보기</button></td>
-            </tr>
-            <tr>
-                <th scope="row">안전자산-금</th>
-                <td>안전자산은 위험이 없다고 해서 무위험자산이라고도 한다.</td>
-                <td><button class="btn btn-info">자세히보기</button></td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+    <!-- 메인자리임 -->
+    <main id="main" class="main">
+      <div id="body" class="col-10" style="background-color: white">
+        <div class="d-flex justify-content-between" style="border-bottom: 2px solid blue;">
+          <div><img class="mb-3" id="square" src="img\bluebox.jpg" alt="이미지 교체중입니다.">&nbsp;<h2 style="display: inline-block" class="fs-2 fw-bold" >검색결과</h2> </div>
+          <div id="board-search" class="search-bar">
+          </div><!-- End Search Bar -->
+        </div>
+          <br />
+        <table class="table">
+            <thead class="table-info">
+                <tr>
+                    <th scope="col">종목 이름</th>
+                    <th scope="col">종목 설명</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">국내주식-KOSPI</th>
+                    <td>KOSPI는 국내 주식 지표입니다</td>
+                    <td><button class="btn btn-outline-primary">자세히보기</button></td>
+                </tr>
+                <tr>
+                    <th scope="row">해외주식-NASDAQ</th>
+                    <td>나스닥은 미국의 장외 주식거래시장이다.</td>
+                    <td><button class="btn btn-outline-primary">자세히보기</button></td>
+                </tr>
+                <tr>
+                    <th scope="row">해외주식-E</th>
+                    <td>안전자산은 위험이 없다고 해서 무위험자산이라고도 한다.</td>
+                    <td><button class="btn btn-outline-primary">자세히보기</button></td>
+                </tr>
+                <tr>
+                  <th scope="row">안전자산-금</th>
+                  <td>안전자산은 위험이 없다고 해서 무위험자산이라고도 한다.</td>
+                  <td><button class="btn btn-outline-primary">자세히보기</button></td>
+                </tr>
+                <tr>
+                  <th scope="row">안전자산-금</th>
+                  <td>안전자산은 위험이 없다고 해서 무위험자산이라고도 한다.</td>
+                  <td><button class="btn btn-outline-primary">자세히보기</button></td>
+                </tr>
+                <tr>
+                  <th scope="row">안전자산-금</th>
+                  <td>안전자산은 위험이 없다고 해서 무위험자산이라고도 한다.</td>
+                  <td><button class="btn btn-outline-primary">자세히보기</button></td>
+                </tr>
+                <tr>
+                  <th scope="row">안전자산-금</th>
+                  <td>안전자산은 위험이 없다고 해서 무위험자산이라고도 한다.</td>
+                  <td><button class="btn btn-outline-primary">자세히보기</button></td>
+                </tr>
+                <tr>
+                  <th scope="row">안전자산-금</th>
+                  <td>안전자산은 위험이 없다고 해서 무위험자산이라고도 한다.</td>
+                  <td><button class="btn btn-outline-primary">자세히보기</button></td>
+                </tr>
+                <tr>
+                  <th scope="row">안전자산-금</th>
+                  <td>안전자산은 위험이 없다고 해서 무위험자산이라고도 한다.</td>
+                  <td><button class="btn btn-outline-primary">자세히보기</button></td>
+                </tr>
+                <tr>
+                  <th scope="row">안전자산-금</th>
+                  <td>안전자산은 위험이 없다고 해서 무위험자산이라고도 한다.</td>
+                  <td><button class="btn btn-outline-primary">자세히보기</button></td>
+                </tr>
+                <tr>
+                  <th scope="row">안전자산-금</th>
+                  <td>안전자산은 위험이 없다고 해서 무위험자산이라고도 한다.</td>
+                  <td><button class="btn btn-outline-primary">자세히보기</button></td>
+                </tr>
+                <tr>
+                  <th scope="row">안전자산-금</th>
+                  <td>안전자산은 위험이 없다고 해서 무위험자산이라고도 한다.</td>
+                  <td><button class="btn btn-outline-primary">자세히보기</button></td>
+                </tr>
+                <tr>
+                  <th scope="row">안전자산-금</th>
+                  <td>안전자산은 위험이 없다고 해서 무위험자산이라고도 한다.</td>
+                  <td><button class="btn btn-outline-primary">자세히보기</button></td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+    </main>
 </div>
 </div>
 

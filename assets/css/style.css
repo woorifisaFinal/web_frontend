@@ -1201,7 +1201,6 @@ h6 {
   text-align: center;
   color: #012970;
 }
-
 .footer .credits {
   padding-top: 5px;
   text-align: center;
@@ -1335,3 +1334,48 @@ h6 {
   color: blue;
 
 }
+
+/* productcompare */
+/* 박스 글씨 */
+#productcompare-box{
+  font-family: fantasy;
+  font-size: 24px;
+  font-weight: bold;
+}
+/* 박스 레이아웃 */
+.product-box {
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  border: 2px solid blueviolet;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 50px;
+  flex-direction: column; /* Display the sections vertically */
+  justify-content: flex-start; /* Distribute space evenly between sections */
+}
+  .product-box:hover {
+      background-color: #e0e0e0;
+  }
+
+.top-section,
+.bottom-section {
+  padding: 10px;
+  text-align: center;
+}
+
+/* .top-section {
+  background-color: ; 
+} */
+
+.bottom-section {
+  /* background-color: ;  */
+  border-top: 2px solid blueviolet; /* Add a top border to create a line */
+  padding-top: 10px; /* Add padding to maintain spacing */
+}
+
+
+/* end of productcompare */
