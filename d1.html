@@ -27,7 +27,14 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.21.0/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- ECharts Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.1.2/echarts.min.js"></script>
+  <title>차트와 화살표</title>
   <!-- =======================================================
   * Template Name: NiceAdmin
   * Updated: May 30 2023 with Bootstrap v5.3.0
@@ -209,53 +216,148 @@
   </ul>
 
 </aside><!-- End Sidebar-->
-
-  <main id="main" class="main">
-
-
-    <div style="border-bottom: 2px solid blue;">
-      <img class="mb-3" id="square" src="img\bluebox.jpg" alt="이미지 교체중입니다."><h2 class="mb-4" style="display: inline-block; margin-left:8px; font-weight: bold" > 종목 </h2>
-    </div>
-
-    <div class="card">
-      <div class="card-body">
-        <p><a href="https://getbootstrap.com/docs/5.0/utilities/borders/#border-color" target="_blank">Border color utilities</a> can be added to change colors:</p>
-    
-        <!-- Primary Color Bordered Table -->
-        <table class="table table-bordered border-2 border-primary">
-          <thead>
-            <tr>
-              <th scope="col" style="background-color: lightblue;">펀드명</th>
-              <th scope="col">Name</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row" style="background-color: lightblue;">운용사</th>
-              <td>삼성</td>
-            </tr>
-            <tr>
-              <th scope="row" style="background-color: lightblue;">최초출시일</th>
-              <td>2022...</td>
-              <td>펀드 수</td>
-              <td>~개</td>
-            </tr>
-            <tr>
-              <th scope="row" style="background-color: lightblue;">시가총액</th>
-              <td>~억</td>
-            </tr>
-            <tr>
-              <th scope="row" style="background-color: lightblue;">특징</th>
-              <td>~</td>
-            </tr>
-          </tbody>
-        </table>
-        <!-- End Primary Color Bordered Table -->
+<body>
+    <div class="container">
+      <div class="row">
+        <!-- 차트 5 컨테이너 -->
+        <div class="col-lg-6" id="chartContainer5" style="display: block;">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">위험형</h5>
+              <!-- ECharts Pie Chart 5 -->
+              <div id="echartsPieChart5" style="min-height: 400px;" class="echart"></div>
+            </div>
+          </div>
+        </div>
+        <!-- 차트 6 컨테이너 -->
+        <div class="col-lg-6" id="chartContainer6" style="display: none;">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">안전형</h5>
+              <!-- ECharts Pie Chart 6 -->
+              <div id="echartsPieChart6" style="min-height: 400px;" class="echart"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 화살표 아이콘 -->
+      <div class="text-center mt-3">
+        <i class="bi bi-arrow-right-circle" id="rightArrow" style="cursor: pointer;"></i>
+        <i class="bi bi-arrow-left-circle" id="leftArrow" style="cursor: pointer; display: none;"></i>
       </div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const chartData5 = [
+          { value: 10, name: 'us' },
+          { value: 30, name: 'uk' },
+          { value: 25, name: 'jp' },
+          { value: 15, name: 'euro' },
+          { value: 20, name: 'kor' },
+          { value: 30, name: 'ind' },
+          { value: 45, name: 'tw' },
+          { value: 80, name: 'br' },
+          { value: 90, name: 'kor3y' },
+          { value: 14, name: 'kor10y' },
+          { value: 19, name: 'us3y' },
+          { value: 33, name: 'us10y' },
+          { value: 14, name: 'gold' }
+        ];
     
+        const chartData6 = [
+          { value: 60, name: 'us' },
+          { value: 15, name: 'uk' },
+          { value: 10, name: 'jp' },
+          { value: 5, name: 'euro' },
+          { value: 20, name: 'kor' },
+          { value: 30, name: 'ind' },
+          { value: 45, name: 'tw' },
+          { value: 80, name: 'br' },
+          { value: 90, name: 'kor3y' },
+          { value: 14, name: 'kor10y' },
+          { value: 19, name: 'us3y' },
+          { value: 33, name: 'us10y' },
+          { value: 14, name: 'gold' }
+        ];
+    
+        const createChart = (chartId, chartData, titleText) => {
+          const threshold = 5;
+          let filteredData = [];
+          let otherData = 0;
+    
+          chartData.forEach(item => {
+            if ((item.value / chartData.reduce((acc, curr) => acc + curr.value, 0)) * 100 >= threshold) {
+              filteredData.push(item);
+            } else {
+              otherData += item.value;
+            }
+          });
+    
+          if (otherData > 0) {
+            filteredData.push({ value: otherData, name: '기타' });
+          }
+    
+          const chart = echarts.init(document.querySelector(`#${chartId}`));
+          chart.setOption({
+            title: {
+              text: titleText,
+              subtext: 'Data',
+              left: 'center'
+            },
+            tooltip: {
+              trigger: 'item'
+            },
+            legend: {
+              orient: 'vertical',
+              left: 'left'
+            },
+            series: [{
+              name: 'Access From',
+              type: 'pie',
+              radius: '50%',
+              data: filteredData,
+              emphasis: {
+                itemStyle: {
+                  shadowBlur: 10,
+                  shadowOffsetX: 0,
+                  shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+              }
+            }]
+          });
+        };
+    
+        createChart("echartsPieChart5", chartData5, "위험형");
+        createChart("echartsPieChart6", chartData6, "안전형");
+    
+        // 화살표 클릭 이벤트 처리
+        const rightArrow = document.getElementById("rightArrow");
+        const leftArrow = document.getElementById("leftArrow");
+    
+        rightArrow.addEventListener("click", () => {
+          const chartContainer5 = document.getElementById("chartContainer5");
+          const chartContainer6 = document.getElementById("chartContainer6");
+    
+          chartContainer5.style.display = "none";
+          chartContainer6.style.display = "block";
+          rightArrow.style.display = "none";
+          leftArrow.style.display = "block";
+        });
+    
+        leftArrow.addEventListener("click", () => {
+          const chartContainer5 = document.getElementById("chartContainer5");
+          const chartContainer6 = document.getElementById("chartContainer6");
+    
+          chartContainer6.style.display = "none";
+          chartContainer5.style.display = "block";
+          leftArrow.style.display = "none";
+          rightArrow.style.display = "block";
+        });
+      });
+    </script>
+    </body>
 
-
+    
   </main><!-- End #main -->
     	<!-- ======= Footer ======= -->
 	<footer class="footer">
