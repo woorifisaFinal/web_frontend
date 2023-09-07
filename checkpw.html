@@ -1,237 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+  <title>Final Project</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: May 30 2023 with Bootstrap v5.3.0
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <i class="bi bi-list toggle-sidebar-btn" style="float: left; margin-right: 30px;"></i>
+      <a href="index.html" class="logo d-flex align-items-center">
+      <img src="assets/img/logo.png" alt="">
+      <span class="d-none d-lg-block">우리FISA</span>
+      </a>
+      
     
-		<meta charset="utf-8">
-		<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	  
-		<title>Final Project</title>
-		<meta content="" name="description">
-		<meta content="" name="keywords">
-	  
-		<!-- Favicons -->
-		<link href="assets/img/favicon.png" rel="icon">
-		<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-	  
-		<!-- Google Fonts -->
-		<link href="https://fonts.gstatic.com" rel="preconnect">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-	  
-		<!-- Vendor CSS Files -->
-		<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-		<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-		<link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
-		<link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
-		<link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-		<link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
-	  
-		<!-- Template Main CSS File -->
-		<link href="assets/css/style.css" rel="stylesheet">
-	  
-		<!-- =======================================================
-		* Template Name: NiceAdmin
-		* Updated: May 30 2023 with Bootstrap v5.3.0
-		* Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-		* Author: BootstrapMade.com
-		* License: https://bootstrapmade.com/license/
-		======================================================== -->
+     
 
-		<style>
-			/* 기본 스타일 */
-			.card {
-			  width: 170%; /* 요소의 가로 크기를 170%로 설정합니다. */
-			  max-width: 600px; /* 요소의 최대 가로 크기를 조절합니다. 필요에 따라 조절하세요. */
-			}
-		  
-			/* 화면 폭이 768px 이하인 경우 */
-			@media (max-width: 768px) {
-			  .card {
-				width: 100% !important; /* 화면 폭이 작을 때 가로 크기를 100%로 변경합니다. !important는 기존 스타일을 덮어쓰기 위해 사용됩니다. */
-				max-width: none; /* 최대 가로 크기를 제한하지 않습니다. */
-			  }
-			}
-			.custom-button-group {
+
+    </div><!-- End Logo -->
+  
+    <div class="col-10">
+      <div class="container">
+      <div class="row">
+        <div class="col-8">
+          <div class="search-bar d-flex justify-content-start">
+            <form class="search-form d-flex align-items-center" method="POST" action="#">
+                <input type="text" name="query" placeholder="종목을 검색하세요" title="Enter search keyword" class="form-control form-control-sm">
+                <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+            </form>
+          </div><!-- End Search Bar -->
+        </div>
+        <div class="col-4 text-end">
+      </div>
+      </div>
+      <div class="d-flex custom-button-group">
+        <a href="login.html" class="btn btn-custom" style="height: 45px; margin-right: 10px; color: gray; font-size: 14px;">
+          로그인
+        </a>
+        <a href="signup.html" class="btn btn" style="height: 45px; color: gray; font-size: 14px;">
+            회원가입        
+        </a>
+      </div>
+    </div>
+        
+    </div>
+    <style>
+      .custom-button-group {
           display: flex;
           justify-content: flex-end;
           margin-top: -40px; /* 버튼을 위로 올리는 여백 조정 */
       }
-		  </style>
-	  </head>
-	<body>
+    </style>
 
-		
-		<!-- ======= Header ======= -->
-		<header id="header" class="header fixed-top d-flex align-items-center">
-
-			<div class="d-flex align-items-center justify-content-between">
-			  <i class="bi bi-list toggle-sidebar-btn" style="float: left; margin-right: 30px;"></i>
-			  <a href="index.html" class="logo d-flex align-items-center">
-				<img src="assets/img/logo.png" alt="">
-				<span class="d-none d-lg-block">우리FISA</span>
-			  </a>
-			</div><!-- End Logo -->
-			<div class="col-10">
-			  <div class="container">
-				<div class="row">
-				  <div class="col-8">
-            <div class="search-bar d-flex justify-content-start">
-              <form class="search-form d-flex align-items-center" method="POST" action="#">
-                  <input type="text" name="query" placeholder="종목을 검색하세요" title="Enter search keyword" class="form-control form-control-sm">
-                  <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-              </form>
-            </div><!-- End Search Bar -->
-          </div>
-				  <div class="col-4 text-end">
-				</div>
-			  </div>
-        <div class="d-flex custom-button-group">
-          <a href="login.html" class="btn btn-custom" style="height: 45px; margin-right: 10px; color: gray; font-size: 14px;">
-            로그인
-          </a>
-          <a href="signup.html" class="btn btn" style="height: 45px; color: gray; font-size: 14px;">
-              회원가입        
-          </a>
-        </div>
-      </div>
-        	
-      </div>
-      <style>
-        .custom-button-group {
-            display: flex;
-            justify-content: flex-end;
-            margin-top: -40px; /* 버튼을 위로 올리는 여백 조정 */
-        }
-      </style>
-
-      
-		</header><!-- End Header -->
-		
-
-
-
-  <!-- ======= Sidebar ======= -->
-    <aside id="sidebar" class="sidebar">
-
-      <ul class="sidebar-nav" id="sidebar-nav">
-
-        <li class="nav-item">
-          <a class="nav-link " href="dashboard.html">
-            <i class="bi bi-grid"></i>
-            <span>대시보드</span>
-          </a>
-        </li><!-- End Dashboard Nav -->
-
-        <li class="nav-item">
-          <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-            <i class="bi bi-menu-button-wide"></i><span>종목</span><i class="bi bi-chevron-down ms-auto"></i>
-          </a>
-          <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-            <li>
-              <a href="item.html">
-                <i class="bi bi-circle"></i><span>종목 상세페이지</span>
-              </a>
-            </li>
-            <li>
-              <a href="components-cards.html">
-                <i class="bi bi-circle"></i><span>주식</span>
-              </a>
-            </li>
-
-
-            <li>
-              <a href="components-progress.html">
-                <i class="bi bi-circle"></i><span>채권</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="components-progress.html">
-                <i class="bi bi-circle"></i><span>안전자산</span>
-              </a>
-            </li>
-          </ul>
-        </li><!-- End Components Nav -->
-
-
-        <li class="nav-item">
-          <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-            <i class="bi bi-layout-text-window-reverse"></i><span>상품비교함</span><i class="bi bi-chevron-down ms-auto"></i>
-          </a>
-          <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-            <li>
-              <a href="tables-general.html">
-                <i class="bi bi-circle"></i><span>첫번째 자산</span>
-              </a>
-            </li>
-            <li>
-              <a href="tables-data.html">
-                <i class="bi bi-circle"></i><span>두번째 자산</span>
-              </a>
-            </li>
-          </ul>
-        </li><!-- End Tables Nav -->
-
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="notice.html">
-              <i class="bi bi-bar-chart"></i><span>공지사항</span>
-          </a>
-      </li>
-
-
-      </ul>
-
-  </aside><!-- End Sidebar-->
+    
+  </header><!-- End Header -->
   
-  	<main id="main" class="main">
-		<div class="col-10">
-			<br />
-			<main>
+
+
+
+<!-- ======= Sidebar ======= -->
+<aside id="sidebar" class="sidebar">
+
+  <ul class="sidebar-nav" id="sidebar-nav">
+
+    <li class="nav-item">
+      <a class="nav-link " href="dashboard.html">
+        <i class="bi bi-grid"></i>
+        <span>대시보드</span>
+      </a>
+    </li><!-- End Dashboard Nav -->
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+        <i class="bi bi-menu-button-wide"></i><span>종목</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <li>
+          <a href="stock.html">
+            <i class="bi bi-circle"></i><span>us</span>
+          </a>
+        </li>
+        <li>
+          <a href="stock.html">
+            <i class="bi bi-circle"></i><span>uk</span>
+          </a>
+        </li>
+        <li>
+          <a href="stock.html">
+            <i class="bi bi-circle"></i><span>jp</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="stock.html">
+            <i class="bi bi-circle"></i><span>euro</span>
+          </a>
+        </li>
+        <li>
+          <a href="stock.html">
+            <i class="bi bi-circle"></i><span>kor</span>
+          </a>
+        </li>
+        <li>
+          <a href="stock.html">
+            <i class="bi bi-circle"></i><span>ind</span>
+          </a>
+        </li>
+        <li>
+          <a href="stock.html">
+            <i class="bi bi-circle"></i><span>tw</span>
+          </a>
+        </li>
+        <li>
+          <a href="stock.html">
+            <i class="bi bi-circle"></i><span>br</span>
+          </a>
+        </li>
+        <li>
+          <a href="stock.html">
+            <i class="bi bi-circle"></i><span>kor3y</span>
+          </a>
+        </li>
+        <li>
+          <a href="stock.html">
+            <i class="bi bi-circle"></i><span>kor10y</span>
+          </a>
+        </li>
+        <li>
+          <a href="stock.html">
+            <i class="bi bi-circle"></i><span>us3y</span>
+          </a>
+        </li>
+        <li>
+          <a href="stock.html">
+            <i class="bi bi-circle"></i><span>us10y</span>
+          </a>
+        </li>
+        <li>
+          <a href="stock.html">
+            <i class="bi bi-circle"></i><span>gold</span>
+          </a>
+        </li>
+      </ul>
+    </li><!-- End Components Nav -->
+
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+        <i class="bi bi-layout-text-window-reverse"></i><span>상품비교함</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <li>
+          <a href="tables-general.html">
+            <i class="bi bi-circle"></i><span>첫번째 자산</span>
+          </a>
+        </li>
+        <li>
+          <a href="tables-data.html">
+            <i class="bi bi-circle"></i><span>두번째 자산</span>
+          </a>
+        </li>
+      </ul>
+    </li><!-- End Tables Nav -->
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="notice.html">
+          <i class="bi bi-bar-chart"></i><span>공지사항</span>
+      </a>
+  </li>
+
+
+  </ul>
+
+</aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+	<div class="col-10">
+		<br />
+			<div class="container">
+		
+				<section class="section register min-vh-400 d-flex flex-column align-items-center justify-content-center py-4">
 				<div class="container">
-			
-					<section class="section register min-vh-400 d-flex flex-column align-items-center justify-content-center py-4">
-					<div class="container">
-						<div class="row justify-content-center">
-						<div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
-			
-							<div class="d-flex justify-content-center py-4">
-							<a href="index.html" class="logo d-flex align-items-center w-auto">
-								<img src="assets/img/logo.png" alt="">
-								<span class="d-none d-lg-block">우리FISA</span>
-							</a>
-							</div><!-- End Logo -->
-			
-						<div class="card mb-3">
-							<div class="card-body">
-			
-							<div class="pt-4 pb-2">
-								<h5 class="card-title text-center pb-0 fs-4">회원 확인</h5>
-			
-							</div>
-			
-							<form class="row g-3 needs-validation" novalidate>
-			
-								<div class="col-12">
-								<label for="yourPassword" class="form-label">비밀번호</label>
-								<input type="password" name="password" class="form-control" id="yourPassword" required>
-								<div class="invalid-feedback">비밀번호를 확인하세요</div>
-								</div>
-
-								<div class="col-12">
-								<button class="btn btn-primary w-100" type="submit">정보수정</button>
-								</div>
-
-							</form>
-			
-							</div>
+					<div class="row justify-content-center">
+					<div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
+		
+						<div class="d-flex justify-content-center py-4">
+						<a href="index.html" class="logo d-flex align-items-center w-auto">
+							<img src="assets/img/logo.png" alt="">
+							<span class="d-none d-lg-block">우리FISA</span>
+						</a>
+						</div><!-- End Logo -->
+		
+					<div class="card mb-3">
+						<div class="card-body">
+		
+						<div class="pt-4 pb-2">
+							<h5 class="card-title text-center pb-0 fs-4">회원 확인</h5>
+		
 						</div>
-					</div>	
+		
+						<form class="row g-3 needs-validation" novalidate>
+		
+							<div class="col-12">
+							<label for="yourPassword" class="form-label">비밀번호</label>
+							<input type="password" name="password" class="form-control" id="yourPassword" required>
+							<div class="invalid-feedback">비밀번호를 확인하세요</div>
+							</div>
+
+							<div class="col-12">
+							<button class="btn btn-primary w-100" type="submit">정보수정</button>
+							</div>
+
+						</form>
+		
+						</div>
+					</div>
 				</div>	
-			</main>
-		</div>	
-	</main>	
-  	<!-- ======= Footer ======= -->
+			</div>	
+	</div>	
+  </main><!-- End #main -->
+    	<!-- ======= Footer ======= -->
 	<footer class="footer">
 		<div class="copyright">
 			&copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
@@ -257,17 +282,15 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-  crossorigin="anonymous"
-></script>
 
-	</body>
 
-	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-		crossorigin="anonymous"
-	></script>
+</body>
+
 </html>
+
+
+
+
+
+
+
