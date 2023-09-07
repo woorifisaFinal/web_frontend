@@ -1379,3 +1379,11 @@ h6 {
 
 
 /* end of productcompare */
+
+/* result-body */
+#result-container{
+  font-family: fantasy;
+  font-size: 24px;
+  font-weight: bold;
+}
+/* result-body-end */
