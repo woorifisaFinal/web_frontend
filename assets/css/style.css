@@ -1387,3 +1387,73 @@ h6 {
   font-weight: bold;
 }
 /* result-body-end */
+
+
+/* mid menu */
+
+#mid_cont_menu {
+  background-color: rgba(17, 113, 193);
+  width: 764px;
+  height: 76px;
+  border-radius: 60px;
+  display: flex; /* Use flexbox to create a row layout */
+  font-size: 25px;
+  font-family: fantasy;
+  font-weight: bold;
+  margin-left: 90px;
+}
+
+  #mid_cont_menu a {
+    flex: 1; /* Each link takes up an equal amount of space */
+    display: flex; /* Nested flex containers for centering */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    border-left: 2px solid white; /* Add white border to separate columns */
+  }
+
+  #mid_cont_menu a:first-child {
+    border-left: none; /* Remove border from the first column */
+  }
+
+  /* Add styles for the links if needed */
+  #mid_cont_menu a {
+    text-decoration: none; /* Remove underlines from links */
+    color: white; /* Text color for links */
+    font-weight: bold; /* Bold font for links */
+  }
+
+/* end mid menu */
+
+/* mid table */
+  table {
+      margin-top: 40px;
+      border-collapse: collapse;
+      width: 90%;
+      font-weight: bold;
+      font-family: fantasy;
+      font-size: 25px;
+  }
+  th, td {
+      border-left: 2px solid rgb(228, 224, 224);
+      border-right: 2px solid rgb(228, 224, 224);
+      padding: 8px;
+      text-align: center;
+  }
+  /* Merge columns 1 through 8 in row 1 */
+  th:nth-child(1), th:nth-child(2), th:nth-child(3), th:nth-child(4), th:nth-child(5), th:nth-child(6), th:nth-child(7), th:nth-child(8) {
+      background-color: white;
+      font-weight: bold;
+      text-align: left;
+  }
+  /* Merge columns 9 through 12 in row 1 */
+  th:nth-child(9), th:nth-child(10), th:nth-child(11), th:nth-child(12) {
+      background-color: lightblue;
+      font-weight: bold;
+  }
+  /* Set row 1 height */
+  tr:nth-child(1) {
+      height: 40px;
+  }
+
+
+/* end mid table */
