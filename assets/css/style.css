@@ -659,7 +659,9 @@ h6 {
   }
 
   .toggle-sidebar .sidebar {
-    left: -300px;
+    /* left: -300px; */
+    left: -100%; 
+    transition: left 0.9s ease-in-out; 
   }
 }
 
@@ -1457,3 +1459,15 @@ h6 {
 
 
 /* end mid table */
+
+
+head, body, footer, .sidebar, .header, header {
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+/* .toggle-sidebar .sidebar 이부분 수정함 */
+
+ /* {
+  margin-left: 400px;
+} */
