@@ -1,145 +1,109 @@
 <!DOCTYPE html>
-<html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Survey Form</title>
-    <link
-      href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  <style>
-    * {
-  box-sizing: border-box;
-  font-family: "SUIT", sans-serif;
-}
-
-body {
-  color: #000;
-}
-
-h1 {
-  margin: 20px auto;
-  text-align: center;
-}
-
-h1 img {
-  width: 450px;
-}
-
-
-
-
-/* 
-	redered legend : https://html.spec.whatwg.org/multipage/rendering.html#rendered-legend 
-	legend는 fieldset의 패딩을 무시합니다.
-*/
-#mainForm legend {
-  font-size: 1.2em;
-  text-align: center;
-}
-
-#mainForm label {
-  display: block;
-  margin-bottom: 10px;
-}
-
-
-
-/* 가상클래스 valid. input에 입력받은 값이 유효하다면을 의미합니다. */
-#mainForm input:valid {
-  background-color: #ebebeb;
-}
-
-#mainForm button {
-  /* fieldset은 BFC를 생성하기 때문에 해제가 필요 없습니다. https://html.spec.whatwg.org/multipage/rendering.html#the-fieldset-and-legend-elements */
-  float: right;
-  padding: 10px;
-  margin-left: 10px;
-  background-color: #000;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 5px;
-  border: none;
-}
-
-#mainForm progress {
-  width: 100%;
-  height: 14px;
-  appearance: none;
-}
-
-#mainForm progress::-webkit-progress-bar {
-  /* progressbar의 배경이 되는 요소 */
-  border-radius: 20px;
-  background-color: #ebebeb;
-}
-
-#mainForm progress::-webkit-progress-value {
-  /* progress의 진행 bar가 되는 요소 */
-  border-radius: 20px;
-  background-color: #ff7f50;
-}
-
-  </style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column Chart with Modals</title>
+    <!-- ApexCharts 라이브러리 로드 -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- Bootstrap CSS 및 JavaScript 로드 -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
+<body>
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Column Chart</h5>
 
-  <body>
+                <!-- Column Chart -->
+                <div id="columnChart"></div>
+                
+                <!-- Modal 1 -->
+                <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modal1Label">블-안</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                모달1 내용
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Modal 1 -->
 
-    <form id="mainForm">
-
-        <!-- progress : 작업의 완료 정도를 나타내는 요소입니다. -->
-        <progress max="100" value="0" class="bar-progress"></progress>
-        <p class="msg-notice">설문지를 작성하세요!</p>
-
-        <label for="q1">질문 1. 무엇을 가장 배우고 싶으세요?</label>
-        <input type="text" id="q1" required />
-        <label for="q2">질문 2. 시간은 언제가 적당한가요?</label>
-        <input type="text" id="q2" required />
-        <label for="q3">질문 3. 몇 시간정도 예상하세요?</label>
-        <input type="text" id="q3" required />
-        <label for="q4">질문 4. 난이도를 조정한다면?</label>
-        <input type="text" id="q4" required />
-        <label for="q5">질문 5. 끝으로 하고싶은 말이 있나요?</label>
-        <input type="text" id="q5" required />
-
-
-
-    </form>
-
-    <script src="script.js"></script>
-    <script>
-        const surveyForm = document.querySelector("#mainForm");
-const progressBar = surveyForm.querySelector(".bar-progress");
-const inp = surveyForm.querySelectorAll("input");
-const message = surveyForm.querySelector(".msg-notice");
-
-surveyForm.addEventListener("input", () => {
-  let count = 0;
-
-  inp.forEach((el) => el.value.length > 0 && count++);
-
-  progressBar.value = 100 * (count / inp.length);
-
-  if (progressBar.value === 100) {
-    message.textContent = "모든 질문에 응답하셨습니다. 제출해주세요.";
-  } else {
-    message.textContent = "설문지를 작성하세요!";
-  }
-});
-
-surveyForm.addEventListener("click", (e) => {
-  if (e.target.type === "reset") {
-    progressBar.value = 0;
-  }
-
-  if (e.target.type === "submit" && progressBar.value === 100) {
-    alert("설문에 참여해주셔서 감사합니다🎉");
-  }
-});
-
-    </script>
-  </body>
+                <!-- Column Chart 스크립트 -->
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                        new ApexCharts(document.querySelector("#columnChart"), {
+                            series: [{
+                                name: '주식',
+                                data: [100, 100, 100, 100, 100, 100]
+                            }, {
+                                name: '채권',
+                                data: [76, 85, 101, 25, 90, 40]
+                            }, {
+                                name: '안전자산',
+                                data: [35, 41, 36, 70, 30, 40]
+                            }],
+                            chart: {
+                                type: 'bar',
+                                height: 350
+                            },
+                            plotOptions: {
+                                bar: {
+                                    horizontal: false,
+                                    columnWidth: '55%',
+                                    endingShape: 'rounded'
+                                },
+                            },
+                            dataLabels: {
+                                enabled: false
+                            },
+                            stroke: {
+                                show: true,
+                                width: 2,
+                                colors: ['transparent']
+                            },
+                            xaxis: {
+                                categories: ['블-안전', '블-위험', '알-안전', '알-위험', '나-안전', '나-위험']
+                            },
+                            yaxis: {
+                                title: {
+                                    text: '$ (thousands)'
+                                }
+                            },
+                            fill: {
+                                opacity: 1
+                            },
+                            tooltip: {
+                                y: {
+                                    formatter: function (val) {
+                                        return "$ " + val + " thousands"
+                                    }
+                                }
+                            }
+                        }).render();
+                        
+                        // 모달 1 열기
+                        $('#columnChart').on('click', '.apexcharts-xaxis-text', function () {
+                            $('#modal1').modal('show');
+                        });
+                    });
+                </script>
+                <!-- End Column Chart 스크립트 -->
+            </div>
+        </div>
+    </div>
+</body>
 </html>
